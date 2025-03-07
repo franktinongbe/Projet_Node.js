@@ -48,7 +48,7 @@ app.post('/task', (req, res)=>{
 });
 // Ajouter de taches
 app.put('/task/ : id', (req, res)=>{
-    const taskId = parseInt(req.params.id)
+    const taskId = parseInt(req.body.params.id)
     if(task) {
         task.description = req.body.description;
         res.json({message: 'Tache mise à jour avec succès', task});
